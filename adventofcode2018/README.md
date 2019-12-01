@@ -1,2 +1,2 @@
 # AdventOfCode2018 Solutions
-![Alt Text](https://media.giphy.com/media/J1cugoFP5KryQjjq0q/giphy.gif)
+![Alt Text](https://s5.gifyu.com/images/aoc2018.gif)
