@@ -30,6 +30,12 @@ def main():
             for axis in range(3):
                 moons[moon][axis] += velocity[moon][axis]
 
+    for ind, moon in moons.items():
+        U = sum(map(abs, moon))
+        K = sum(map(abs, velocity[ind].values()))
+        total_energy += K * U
+    print(total_energy)
+
 
 if __name__ == '__main__':
     main()

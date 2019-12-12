@@ -40,9 +40,10 @@ def main():
         for initial_axis in range(3):
             if repeating[initial_axis] != -1 or any([v[initial_axis] != 0 for v in velocity.values()]):
                 continue
-            axis = set([moons[moon_ind][initial_axis] for moon_ind in moons])
-            init_axis = set([initial_moons[moon_ind][initial_axis] for moon_ind in initial_moons])
-            if len(axis & init_axis) == len(moons):
+            for moon_ind in moons:
+                if moons[moon_ind][initial_axis] != initial_moons[moon_ind][initial_axis]:
+                    break
+            else:
                 repeating[initial_axis] = i
 
         if all([v != -1 for v in repeating.values()]):
