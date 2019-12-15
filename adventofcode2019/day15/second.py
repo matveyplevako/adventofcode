@@ -182,8 +182,8 @@ def main():
     gen = next_move()
     next(gen)
     explore_map(gen)
-    level = bfs((0, 0))
-    print(level[oxy_position])
+    level = bfs(oxy_position)
+    print(max(level.values()))
 
 
 if __name__ == '__main__':
