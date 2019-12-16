@@ -1,5 +1,3 @@
-from itertools import cycle
-
 with open("input.txt") as inp:
     inp_number = list(map(int, inp.readline().strip()))
 
