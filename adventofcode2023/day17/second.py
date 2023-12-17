@@ -38,11 +38,12 @@ def main():
         for (di, dj) in dx - {(prev_di, prev_dj), (-prev_di, -prev_dj)}:
             ni, nj = i + di, j + dj
             c = cost
-            for iter_num in range(1, 4):
+            for iter_num in range(1, 11):
                 if not len(cave_map) > ni >= 0 or not len(cave_map[0]) > nj >= 0:
                     break
                 c += cave_map[ni][nj]
-                heappush(s, (c, ni, nj, di, dj))
+                if iter_num >= 4:
+                    heappush(s, (c, ni, nj, di, dj))
                 ni += di
                 nj += dj
 
