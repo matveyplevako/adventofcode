@@ -79,11 +79,7 @@ def main():
             if name not in modules:
                 continue
             modules[name].process(previous, signal, q)
-            print(*q, sep='\n')
-            print('----')
-        print("ANOTHER ONE")
 
-    print(high, low)
     print(high * low)
 
 
